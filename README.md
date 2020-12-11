@@ -125,10 +125,10 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 ## File Descriptions
 
-1. [requirements.txt](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/requirements.txt) - Includes all the required libraries in the Conda Environment.
+1. [requirements.txt](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/requirements.txt) - Includes all the required libraries for the Conda Environment.
 2. [model.py](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/model.py) - Defines the QNetwork which is the nonlinear function approximator to calculate the value actions based directly on observation from the environment.
 3. [dqn_agent.py](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/dqn_agent.py) -  Defines the Agent that uses Deep Learning to find the optimal parameters for the function approximators, determines the best action to take and maximizes the overall or total reward.
-4. [Navigation.ipynb](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/Navigation.ipynb) - The main file that trains the Deep Q-Network and shows the trained agent in action. This file can be run in the Anaconda environment.
+4. [Navigation.ipynb](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/Navigation.ipynb) - The main file that trains the Deep Q-Network and shows the trained agent in action. This file can be run in the Conda environment.
 
 ## Plot of Rewards
 The environment was solved in 540 episodes, with the average reward score of 16 to indicate solving the environment.
