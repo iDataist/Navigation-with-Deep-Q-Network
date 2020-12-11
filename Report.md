@@ -42,4 +42,4 @@ References:
 2. Mnih, Volodymyr, et al. "Human-level control through deep reinforcement learning." Nature518.7540 (2015): 529. http://www.davidqiu.com:8888/research/nature14236.pdf
 
 3. Wang, Schaul, et al. "Dueling Network Architectures for Deep Reinforcement Learning." 2015. https://arxiv.org/abs/1511.06581
-4. Schaul, Quan, et al. "Prioritized Experience Replay." ICLR (2016).https://arxiv.org/abs/1511.05952
+4. Schaul, Quan, et al. "Prioritized Experience Replay." ICLR (2016). https://arxiv.org/abs/1511.05952
