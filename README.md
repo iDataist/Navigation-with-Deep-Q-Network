@@ -135,15 +135,14 @@ The environment was solved in 640 episodes, with the average reward score of 16 
 
 ## Ideas for Future Work
 
-- Prioritized Experience Replay: I have adopted experience replay in the DQN. But some of these experiences may be more important for learning than others. Moreover, these important experiences might occur infrequently. If we sample the batches uniformly, then these experiences have a very small chance of getting selected. Since buffers are practically limited in capacity, older important experiences may get lost. I will implement prioritized experience replay<sup>4</sup> will help to optimize the selection of experiences.
+- Prioritized Experience Replay<sup>3</sup>: I have adopted experience replay in the DQN. But some of these experiences may be more important for learning than others. Moreover, these important experiences might occur infrequently. If we sample the batches uniformly, then these experiences have a very small chance of getting selected. Since buffers are practically limited in capacity, older important experiences may get lost. I will implement prioritized experience replay<sup>4</sup> will help to optimize the selection of experiences.
 
-- Dueling Networks<sup>3</sup>: Dueling networks use two streams, one that estimates the state value function and one that estimates the advantage for each action.These streams may share some layers in the beginning, then branch off with their own fully-connected layers. The desired Q values are obtained by combining the state and advantage values. The value of most states don't vary a lot across actions. So, it makes sense to try and directly estimate them. But we still need to capture the difference actions make in each state. This is where the advantage function comes in.
+- Dueling Networks<sup>4</sup>: Dueling networks use two streams, one that estimates the state value function and one that estimates the advantage for each action.These streams may share some layers in the beginning, then branch off with their own fully-connected layers. The desired Q values are obtained by combining the state and advantage values. The value of most states don't vary a lot across actions. So, it makes sense to try and directly estimate them. But we still need to capture the difference actions make in each state. This is where the advantage function comes in.
 
 References:
 1. Riedmiller, Martin. "Neural fitted Q iteration–first experiences with a data efficient neural reinforcement learning method." European Conference on Machine Learning. Springer, Berlin, Heidelberg, 2005. http://ml.informatik.uni-freiburg.de/former/_media/publications/rieecml05.pdf
-
 2. Mnih, Volodymyr, et al. "Human-level control through deep reinforcement learning." Nature518.7540 (2015): 529. http://www.davidqiu.com:8888/research/nature14236.pdf
+3. Schaul, Quan, et al. "Prioritized Experience Replay." ICLR (2016). https://arxiv.org/abs/1511.05952
+4. Wang, Schaul, et al. "Dueling Network Architectures for Deep Reinforcement Learning." 2015. https://arxiv.org/abs/1511.06581
 
-3. Wang, Schaul, et al. "Dueling Network Architectures for Deep Reinforcement Learning." 2015. https://arxiv.org/abs/1511.06581
 
-4. Schaul, Quan, et al. "Prioritized Experience Replay." ICLR (2016). https://arxiv.org/abs/1511.05952
