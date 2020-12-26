@@ -32,8 +32,6 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 ### 2. Model architecture for the neural network
   - #### Fixed Q-Targets
     - I adopted Double Deep Q-Network structure<sup>1, 2</sup> with three fully connected layers. If a single network is used, the Q-functions values change at each step of training, and then the value estimates can quickly spiral out of control. I used a target network to represent the old Q-function, which is used to compute the loss of every action during training.
-  - #### Dueling Networks
-    - I adopted the dueling networks structure<sup>3</sup>. Dueling networks use two streams, one that estimates the state value function and one that estimates the advantage for each action.These streams may share some layers in the beginning, then branch off with their own fully-connected layers. The desired Q values are obtained by combining the state and advantage values. The value of most states don't vary a lot across actions. So, it makes sense to try and directly estimate them. But we still need to capture the difference actions make in each state. This is where the advantage function comes in.
 
 ### 3. Hyperparameters
 
@@ -138,6 +136,8 @@ The environment was solved in 640 episodes, with the average reward score of 16 
 ## Ideas for Future Work
 
 - Prioritized Experience Replay: I have adopted experience replay in the DQN. But some of these experiences may be more important for learning than others. Moreover, these important experiences might occur infrequently. If we sample the batches uniformly, then these experiences have a very small chance of getting selected. Since buffers are practically limited in capacity, older important experiences may get lost. I will implement prioritized experience replay<sup>4</sup> will help to optimize the selection of experiences.
+
+- Dueling Networks<sup>3</sup>: Dueling networks use two streams, one that estimates the state value function and one that estimates the advantage for each action.These streams may share some layers in the beginning, then branch off with their own fully-connected layers. The desired Q values are obtained by combining the state and advantage values. The value of most states don't vary a lot across actions. So, it makes sense to try and directly estimate them. But we still need to capture the difference actions make in each state. This is where the advantage function comes in.
 
 References:
 1. Riedmiller, Martin. "Neural fitted Q iteration–first experiences with a data efficient neural reinforcement learning method." European Conference on Machine Learning. Springer, Berlin, Heidelberg, 2005. http://ml.informatik.uni-freiburg.de/former/_media/publications/rieecml05.pdf
