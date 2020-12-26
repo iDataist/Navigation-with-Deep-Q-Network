@@ -129,7 +129,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 4. [Navigation.ipynb](https://github.com/iDataist/Navigation-with-Deep-Q-Network/blob/main/Navigation.ipynb) - The main file that trains the Deep Q-Network and shows the trained agent in action. This file can be run in the Conda environment.
 
 ## Plot of Rewards
-The environment was solved in 640 episodes, with the average reward score of 16 to indicate solving the environment.
+The environment was solved in 463 episodes, with the average reward score of 13 to indicate solving the environment.
 
 ![](score.png)
 
